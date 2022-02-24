@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src *;img-src 'self' blob: data:;media-src 'self' blob: data:; style-src 'self' file://* 'unsafe-inline'; script-src 'self' file://* 'unsafe-inline' 'unsafe-eval'" />
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <link href="child.css" rel="stylesheet">
+    <script src="child.js"></script>
+    <title>Clock Tip</title>
+  </head>
+  <body>
+    <header style="-webkit-app-region: drag">
+      <section style="-webkit-app-region: no-drag">
+          <!--html代码-->
+      </section>
+      <section>
+          <!--html代码-->
+      </section>
+      <section style="-webkit-app-region: no-drag">
+          <!--html代码-->
+      </section>
+    </header>
+    <div id="data_div">
+
+    </div>
+    <div id="btn_div">
+      <input id="now_btn" type="button" value="现在就去"/>
+      <input id="wait_btn" type="button" value="在等5分钟"/>
+    </div>
+  </body>
+</html>

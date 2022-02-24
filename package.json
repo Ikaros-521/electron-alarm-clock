@@ -1,0 +1,16 @@
+{
+  "name": "electron-clock",
+  "version": "1.0.0",
+  "description": "clock",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "package":"electron-packager . ElectronClock --platform=win32 --arch=x64 --icon=img/icon.ico --out=./out --asar --app-version=1.0.0 --overwrite --ignore=node_modules"
+  },
+  "author": "Ikaros",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^17.0.1"
+  }
+}
