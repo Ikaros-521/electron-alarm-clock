@@ -3,6 +3,9 @@ window.addEventListener("message", (msg) => {
   // alert("接收到的消息：" + msg.data.file_type + " " + msg.data.file_path);
   var data_div = document.getElementById("data_div");
 
+  // 修改语言
+  language_change_no_save(msg.data.cur_language);
+
   if(msg.data.file_type.indexOf("image/") != -1) {
     let img = document.createElement('img');
     img.src = msg.data.file_path;
@@ -45,6 +48,26 @@ function wait_min(duration) {
     wait_min: duration
   });
   window.close();
+}
+
+// 语言切换
+function language_change_no_save(cur_language) {
+  var now_btn = document.getElementById("now_btn");
+  var wait_btn = document.getElementById("wait_btn");
+
+  if(cur_language == "ch") {
+    now_btn.value = "现在就去";
+    wait_btn.value = "在等5分钟";
+  } else if(cur_language == "en") {
+    now_btn.value = "Go Now";
+    wait_btn.value = "Wait 5min";
+  } else if(cur_language == "jp") {
+    now_btn.value = "今すぐ行こう";
+    wait_btn.value = "5分待っています";
+  } else {
+    now_btn.value = "Go Now";
+    wait_btn.value = "Wait 5min";
+  }
 }
 
 window.addEventListener('DOMContentLoaded', () => {

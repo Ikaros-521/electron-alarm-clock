@@ -76,7 +76,8 @@ function check_time() {
     };
     var child_page = window.open('child.html', '弹窗', child_page_config);
     setTimeout(() => {
-      child_page.postMessage({"file_path":data_json["file_path"], "file_type":data_json["file_type"]}, '*');
+      child_page.postMessage({"file_path":data_json["file_path"], "file_type":data_json["file_type"], 
+        "cur_language":data_json["cur_language"]}, '*');
     }, 1000);
     
   } else {

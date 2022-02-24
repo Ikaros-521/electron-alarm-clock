@@ -11,7 +11,7 @@ function createWindow () {
   // 创建浏览器窗口
   mainWindow = new BrowserWindow({
     width: 400,
-    height: 300,
+    height: 310,
     webPreferences: {
       webSecurity: false,
       preload: path.join(__dirname, 'preload.js'),

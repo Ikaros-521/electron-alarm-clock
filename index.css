@@ -98,3 +98,12 @@ span#file_name {
     font-size: 20px;
     color: #8c8c8c;
 }
+
+div#developer_div {
+    color: #e6e6e6;
+    position: relative;
+    left: 190px;
+    user-select: none;
+    font-size: 12px;
+    width: 160px;
+}
