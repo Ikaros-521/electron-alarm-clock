@@ -41,7 +41,7 @@ function file_selected(node) {
   }
 
   data_json["file_name"] = file.name;
-	data_json["file_type"] = file.type;
+  data_json["file_type"] = file.type;
   data_json["file_path"] = file.path;
   console.log(file);
   // console.log("data_json["file_path"]:" + data_json["file_path"] + "\ndata_json["file_type"]:" + file.type);
@@ -66,14 +66,18 @@ function check_time() {
   if(alarm_time.value == dateString) {
     stop_clock();
     // alert("时间到了！");
-    var child_page_config = {
-      width: 400, 
-      height: 400, 
-      transparent:true, 
-      webPreferences: { 
-        webSecurity: false 
-      }
-    };
+    var child_page_config = "\
+      width = 500,\
+      height = 550,\
+      toolbar = no,\
+      resizable = no,\
+      location = no,\
+      menubar = no,\
+      status = no,\
+      titlebar = no,\
+      alwaysRaised = yes,\
+      dependent = yes,\
+    ";
     var child_page = window.open('child.html', '弹窗', child_page_config);
     setTimeout(() => {
       child_page.postMessage({"file_path":data_json["file_path"], "file_type":data_json["file_type"], 
